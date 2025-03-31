@@ -23,7 +23,7 @@ This project automates the deployment of a static website using AWS S3, Terrafor
 ```
 
 ## 🖼️ Architecture Diagram
-![Deployment Architecture](ChatGPT%20Image%20Mar%2031,%202025,%2002_56_41%20PM.png)
+![Deployment Architecture](diagram.png)
 
 ## 🛠️ Setup and Deployment
 
@@ -52,5 +52,3 @@ terraform apply -auto-approve
 ### 5️⃣ Access the Website
 - Open `http://my-static-website-ayush.s3-website-us-east-1.amazonaws.com` in your browser.
 
-## 📜 License
-This project is licensed under the MIT License.

@@ -1,13 +1,15 @@
-# Static Website Deployment
+# Static Website Deployment with AWS
 
-This project automates the deployment of a static website using AWS S3, Terraform, and GitHub Actions.
+This project automates the deployment of a static website using **AWS S3, CloudFront, Route 53, AWS WAF, CloudWatch, and Terraform**, with a CI/CD pipeline managed by **GitHub Actions**.
 
 ## 🚀 Features
-- **Static Website** hosted on AWS S3
-- **Infrastructure as Code** using Terraform
-- **CI/CD Pipeline** with GitHub Actions
-- **Public Access Policy** for website hosting
-- **Monitoring & Security** using AWS CloudWatch and AWS WAF
+- **Static Website Hosting** on AWS S3
+- **CloudFront CDN** for improved performance and HTTPS support
+- **Route 53** for domain management
+- **AWS WAF** to enhance security
+- **CloudWatch** for monitoring website traffic
+- **Terraform** for infrastructure as code (IaC)
+- **CI/CD Pipeline** using GitHub Actions
 
 ## 📂 Project Structure
 ```
@@ -15,7 +17,7 @@ This project automates the deployment of a static website using AWS S3, Terrafor
 │── 📂 website/                  # Static website files
 │   │── index.html               # Main HTML file
 │── 📂 terraform/                # Terraform scripts
-│   │── main.tf                  # S3 bucket and policies
+│   │── main.tf                  # Infrastructure setup
 │── 📂 .github/workflows/        # GitHub Actions CI/CD
 │   │── deploy.yml               # Workflow for deployment
 │── .gitignore                   # Ignore unnecessary files
@@ -43,12 +45,8 @@ terraform apply -auto-approve
 - Add AWS credentials as GitHub Secrets:
   - `AWS_ACCESS_KEY_ID`
   - `AWS_SECRET_ACCESS_KEY`
-- Push code to GitHub and the CI/CD pipeline will deploy the website automatically.
+- Push code to GitHub, and the CI/CD pipeline will automatically deploy the website.
 
-### 4️⃣ Monitoring & Security
-- **AWS CloudWatch** is used to monitor S3 performance, CloudFront traffic, and CI/CD pipeline logs.
-- **AWS WAF (Web Application Firewall)** provides protection against common web attacks.
-
-### 5️⃣ Access the Website
-- Open `http://my-static-website-ayush.s3-website-us-east-1.amazonaws.com` in your browser.
-
+### 4️⃣ Access the Website
+- The website will be available at **CloudFront's domain** or your custom **Route 53 domain**.
+- Example: `https://my-static-website-[yourname].com

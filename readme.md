@@ -7,6 +7,7 @@ This project automates the deployment of a static website using AWS S3, Terrafor
 - **Infrastructure as Code** using Terraform
 - **CI/CD Pipeline** with GitHub Actions
 - **Public Access Policy** for website hosting
+- **Monitoring & Security** using AWS CloudWatch and AWS WAF
 
 ## 📂 Project Structure
 ```
@@ -44,7 +45,12 @@ terraform apply -auto-approve
   - `AWS_SECRET_ACCESS_KEY`
 - Push code to GitHub and the CI/CD pipeline will deploy the website automatically.
 
-### 4️⃣ Access the Website
+### 4️⃣ Monitoring & Security
+- **AWS CloudWatch** is used to monitor S3 performance, CloudFront traffic, and CI/CD pipeline logs.
+- **AWS WAF (Web Application Firewall)** provides protection against common web attacks.
+
+### 5️⃣ Access the Website
 - Open `http://my-static-website-ayush.s3-website-us-east-1.amazonaws.com` in your browser.
 
-
+## 📜 License
+This project is licensed under the MIT License.
